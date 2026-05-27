@@ -64,7 +64,7 @@ console.log(results);
 | --- | --- |
 | Reddit blocks your IP | We handle rotation and resilience |
 | HTML structure changes break your parser | You get stable JSON |
-| Reddit API has strict OAuth + rate limits | Simple Bearer token, no rate limits |
+| Reddit API has strict OAuth + rate limits | Simple Bearer token, no OAuth required |
 | Maintaining scraping infra is a full-time job | `npm install` and done |
 | You need comments, users, AND search | 13 endpoints, one SDK |
 
@@ -198,7 +198,7 @@ No Reddit account needed. No OAuth setup. No scraping infrastructure on your end
 | **Free tier** | Included with every account — start building immediately |
 | **Pay-as-you-go** | $1.99 per 1,000 requests. Credits never expire. |
 | **Subscriptions** | Available for heavy use — predictable pricing at scale |
-| **Rate limits** | None |
+| **Rate limits** | No hard limits — scale as needed |
 
 No credit card required to start. No monthly commitment. No overages. [Get your API key →](https://fetchlayer.dev/signin)
 

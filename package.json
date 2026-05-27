@@ -1,7 +1,7 @@
 {
   "name": "@fetchlayer/reddit",
   "version": "0.1.0",
-  "description": "Official JavaScript and TypeScript SDK for the FetchLayer Reddit Scraper API.",
+  "description": "Official FetchLayer SDK for Reddit data. Scrape Reddit posts, comments, subreddits, users, and search results with JavaScript and TypeScript.",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -32,15 +32,18 @@
     "url": "https://github.com/fetchlayer-dev/reddit-scraper-js/issues"
   },
   "keywords": [
-    "fetchlayer",
     "reddit",
-    "reddit api",
-    "reddit scraper",
-    "reddit comments",
-    "reddit search",
-    "subreddit api",
-    "javascript sdk",
-    "typescript sdk",
+    "reddit-api",
+    "reddit-scraper",
+    "scrape-reddit",
+    "reddit-comments",
+    "reddit-posts",
+    "subreddit",
+    "social-data",
+    "typescript",
+    "javascript",
+    "fetchlayer",
+    "web-scraping",
     "nodejs"
   ],
   "scripts": {
