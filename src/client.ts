@@ -1,22 +1,31 @@
 import { FetchLayerError } from './errors';
 import type {
+  CommentPermalinkResponse,
   CommunityDetailsParams,
+  CommunityDetailsResponse,
   CommunityPostsParams,
+  CommentItem,
   FetchLayerClientOptions,
   GetCommentPermalinkParams,
   GetPostParams,
   JsonObject,
   LeaderboardParams,
+  ListingResponse,
   PopularPostsParams,
+  PostDetailResponse,
   RedditEndpoint,
   RequestOptions,
   ResolveUrlTypeParams,
+  ResolveUrlTypeResponse,
   SearchCommunitiesParams,
   SearchPostsParams,
   SearchUsersParams,
+  CommunityItem,
   UserCommentsParams,
+  UserItem,
   UserPostsParams,
   UserProfileParams,
+  UserProfileResponse,
 } from './types';
 
 const DEFAULT_BASE_URL = 'https://fetchlayer.dev/api/reddit';
@@ -85,7 +94,7 @@ export class FetchLayerReddit {
     this.timeoutMs = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
   }
 
-  async request<TResponse extends JsonObject = JsonObject>(
+  async request<TResponse extends object = JsonObject>(
     endpoint: RedditEndpoint,
     body: object = {},
     options: RequestOptions = {},
@@ -128,55 +137,55 @@ export class FetchLayerReddit {
     }
   }
 
-  searchPosts<TResponse extends JsonObject = JsonObject>(params: SearchPostsParams, options?: RequestOptions) {
+  searchPosts<TResponse extends object = ListingResponse>(params: SearchPostsParams, options?: RequestOptions) {
     return this.request<TResponse>('search', params, options);
   }
 
-  getPost<TResponse extends JsonObject = JsonObject>(params: GetPostParams, options?: RequestOptions) {
+  getPost<TResponse extends object = PostDetailResponse>(params: GetPostParams, options?: RequestOptions) {
     return this.request<TResponse>('post', params, options);
   }
 
-  getCommentPermalink<TResponse extends JsonObject = JsonObject>(params: GetCommentPermalinkParams, options?: RequestOptions) {
+  getCommentPermalink<TResponse extends object = CommentPermalinkResponse>(params: GetCommentPermalinkParams, options?: RequestOptions) {
     return this.request<TResponse>('comment-permalink', params, options);
   }
 
-  getCommunityDetails<TResponse extends JsonObject = JsonObject>(params: CommunityDetailsParams, options?: RequestOptions) {
+  getCommunityDetails<TResponse extends object = CommunityDetailsResponse>(params: CommunityDetailsParams, options?: RequestOptions) {
     return this.request<TResponse>('community-details', params, options);
   }
 
-  getCommunityPosts<TResponse extends JsonObject = JsonObject>(params: CommunityPostsParams, options?: RequestOptions) {
+  getCommunityPosts<TResponse extends object = ListingResponse>(params: CommunityPostsParams, options?: RequestOptions) {
     return this.request<TResponse>('community-posts', params, options);
   }
 
-  getUserProfile<TResponse extends JsonObject = JsonObject>(params: UserProfileParams, options?: RequestOptions) {
+  getUserProfile<TResponse extends object = UserProfileResponse>(params: UserProfileParams, options?: RequestOptions) {
     return this.request<TResponse>('user-profile', params, options);
   }
 
-  getUserPosts<TResponse extends JsonObject = JsonObject>(params: UserPostsParams, options?: RequestOptions) {
+  getUserPosts<TResponse extends object = ListingResponse>(params: UserPostsParams, options?: RequestOptions) {
     return this.request<TResponse>('user-posts', params, options);
   }
 
-  getUserComments<TResponse extends JsonObject = JsonObject>(params: UserCommentsParams, options?: RequestOptions) {
+  getUserComments<TResponse extends object = ListingResponse<CommentItem>>(params: UserCommentsParams, options?: RequestOptions) {
     return this.request<TResponse>('user-comments', params, options);
   }
 
-  searchCommunities<TResponse extends JsonObject = JsonObject>(params: SearchCommunitiesParams, options?: RequestOptions) {
+  searchCommunities<TResponse extends object = ListingResponse<CommunityItem>>(params: SearchCommunitiesParams, options?: RequestOptions) {
     return this.request<TResponse>('search-communities', params, options);
   }
 
-  searchUsers<TResponse extends JsonObject = JsonObject>(params: SearchUsersParams, options?: RequestOptions) {
+  searchUsers<TResponse extends object = ListingResponse<UserItem>>(params: SearchUsersParams, options?: RequestOptions) {
     return this.request<TResponse>('search-users', params, options);
   }
 
-  getPopularPosts<TResponse extends JsonObject = JsonObject>(params: PopularPostsParams = {}, options?: RequestOptions) {
+  getPopularPosts<TResponse extends object = ListingResponse>(params: PopularPostsParams = {}, options?: RequestOptions) {
     return this.request<TResponse>('popular', params, options);
   }
 
-  getLeaderboard<TResponse extends JsonObject = JsonObject>(params: LeaderboardParams = {}, options?: RequestOptions) {
+  getLeaderboard<TResponse extends object = ListingResponse>(params: LeaderboardParams = {}, options?: RequestOptions) {
     return this.request<TResponse>('leaderboard', params, options);
   }
 
-  resolveUrlType<TResponse extends JsonObject = JsonObject>(params: ResolveUrlTypeParams, options?: RequestOptions) {
+  resolveUrlType<TResponse extends object = ResolveUrlTypeResponse>(params: ResolveUrlTypeParams, options?: RequestOptions) {
     return this.request<TResponse>('resolve-url-type', params, options);
   }
 }

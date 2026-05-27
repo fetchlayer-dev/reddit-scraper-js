@@ -23,4 +23,17 @@ export type {
   UserSort,
   JsonObject,
   JsonValue,
+  // Response types
+  BaseResponse,
+  PostItem,
+  CommentItem,
+  CommunityItem,
+  UserItem,
+  ThreadComment,
+  ListingResponse,
+  PostDetailResponse,
+  CommentPermalinkResponse,
+  CommunityDetailsResponse,
+  UserProfileResponse,
+  ResolveUrlTypeResponse,
 } from './types';
