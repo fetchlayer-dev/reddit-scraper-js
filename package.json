@@ -1,6 +1,6 @@
 {
   "name": "@fetchlayer/reddit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official FetchLayer SDK for Reddit data. Scrape Reddit posts, comments, subreddits, users, and search results with JavaScript and TypeScript.",
   "license": "MIT",
   "type": "module",
