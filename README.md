@@ -1,7 +1,7 @@
 # Reddit Scraper & API Client for JavaScript / TypeScript
 
 [![npm](https://img.shields.io/npm/v/@fetchlayer/reddit)](https://www.npmjs.com/package/@fetchlayer/reddit)
-[![license](https://img.shields.io/npm/l/@fetchlayer/reddit)](https://github.com/fetchlayer/reddit-scraper-js/blob/main/LICENSE)
+[![license](https://img.shields.io/npm/l/@fetchlayer/reddit)](https://github.com/fetchlayer-dev/reddit-scraper-js/blob/main/LICENSE)
 [![types](https://img.shields.io/npm/types/@fetchlayer/reddit)](https://www.npmjs.com/package/@fetchlayer/reddit)
 
 The official JavaScript & TypeScript SDK for the [FetchLayer](https://fetchlayer.dev) Reddit API.
@@ -223,7 +223,7 @@ No credit card required to start. No monthly commitment. No overages. [Get your 
 | **Product page** | [fetchlayer.dev/reddit-scraper](https://fetchlayer.dev/reddit-scraper) |
 | **Homepage** | [fetchlayer.dev](https://fetchlayer.dev) |
 | **npm** | [@fetchlayer/reddit](https://www.npmjs.com/package/@fetchlayer/reddit) |
-| **Issues** | [GitHub Issues](https://github.com/fetchlayer/reddit-scraper-js/issues) |
+| **Issues** | [GitHub Issues](https://github.com/fetchlayer-dev/reddit-scraper-js/issues) |
 
 ---
 

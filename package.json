@@ -25,11 +25,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fetchlayer/reddit-scraper-js.git"
+    "url": "git+https://github.com/fetchlayer-dev/reddit-scraper-js.git"
   },
   "homepage": "https://fetchlayer.dev/reddit-scraper",
   "bugs": {
-    "url": "https://github.com/fetchlayer/reddit-scraper-js/issues"
+    "url": "https://github.com/fetchlayer-dev/reddit-scraper-js/issues"
   },
   "keywords": [
     "fetchlayer",
