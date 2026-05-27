@@ -1,0 +1,59 @@
+{
+  "name": "@fetchlayer/reddit",
+  "version": "0.1.0",
+  "description": "Official JavaScript and TypeScript SDK for the FetchLayer Reddit Scraper API.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fetchlayer/reddit-scraper-js.git"
+  },
+  "homepage": "https://fetchlayer.dev/reddit-scraper",
+  "bugs": {
+    "url": "https://github.com/fetchlayer/reddit-scraper-js/issues"
+  },
+  "keywords": [
+    "fetchlayer",
+    "reddit",
+    "reddit api",
+    "reddit scraper",
+    "reddit comments",
+    "reddit search",
+    "subreddit api",
+    "javascript sdk",
+    "typescript sdk",
+    "nodejs"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm run lint && npm run test"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
+  }
+}
